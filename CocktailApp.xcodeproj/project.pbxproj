@@ -15,6 +15,9 @@
 		57776CD225768B1600B96038 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57776CD125768B1600B96038 /* CategoryTableViewController.swift */; };
 		57776CD525768B2A00B96038 /* CocktailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57776CD425768B2A00B96038 /* CocktailTableViewController.swift */; };
 		57776CD825768B3C00B96038 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57776CD725768B3C00B96038 /* FavoriteTableViewController.swift */; };
+		57776CDB2576918D00B96038 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57776CDA2576918D00B96038 /* Cocktail.swift */; };
+		57776CDE25769A9A00B96038 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57776CDD25769A9A00B96038 /* Category.swift */; };
+		57776CE125769BE300B96038 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57776CE025769BE300B96038 /* Favorite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		57776CD125768B1600B96038 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		57776CD425768B2A00B96038 /* CocktailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailTableViewController.swift; sourceTree = "<group>"; };
 		57776CD725768B3C00B96038 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
+		57776CDA2576918D00B96038 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		57776CDD25769A9A00B96038 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		57776CE025769BE300B96038 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				57776CBB2576877C00B96038 /* AppDelegate.swift */,
 				57776CBD2576877C00B96038 /* SceneDelegate.swift */,
 				57776CC12576877C00B96038 /* Main.storyboard */,
+				57776CE025769BE300B96038 /* Favorite.swift */,
+				57776CDA2576918D00B96038 /* Cocktail.swift */,
+				57776CDD25769A9A00B96038 /* Category.swift */,
 				57776CD125768B1600B96038 /* CategoryTableViewController.swift */,
 				57776CD425768B2A00B96038 /* CocktailTableViewController.swift */,
 				57776CD725768B3C00B96038 /* FavoriteTableViewController.swift */,
@@ -144,10 +153,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				57776CD825768B3C00B96038 /* FavoriteTableViewController.swift in Sources */,
+				57776CE125769BE300B96038 /* Favorite.swift in Sources */,
 				57776CBC2576877C00B96038 /* AppDelegate.swift in Sources */,
 				57776CBE2576877C00B96038 /* SceneDelegate.swift in Sources */,
 				57776CD225768B1600B96038 /* CategoryTableViewController.swift in Sources */,
 				57776CD525768B2A00B96038 /* CocktailTableViewController.swift in Sources */,
+				57776CDB2576918D00B96038 /* Cocktail.swift in Sources */,
+				57776CDE25769A9A00B96038 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
