@@ -8,17 +8,11 @@
 import Foundation
 
 struct Category: Codable{
-    var name: String
-    
+    var strCategory: String
+
 
 enum CodingKeys: String, CodingKey {
-        case name = "strCategory"
+        case strCategory
     }
 }
-
-struct Categories: Codable{
-    let categories: [Category]
-}
-
-
 

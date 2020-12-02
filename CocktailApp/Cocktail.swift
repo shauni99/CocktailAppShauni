@@ -87,8 +87,6 @@ struct Cocktail: Codable {
     }
 }
 
-struct Cocktails: Codable{
-    let cocktails: [Cocktail]
-}
+
 
 
