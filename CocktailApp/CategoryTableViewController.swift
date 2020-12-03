@@ -9,7 +9,7 @@ import UIKit
 
 class CategoryTableViewController: UITableViewController {
     let cocktailController = CocktailController()
-    var categories = [Category]()
+    var categories: [Category] = [Category]()
    
 
     override func viewDidLoad() {
@@ -42,10 +42,7 @@ class CategoryTableViewController: UITableViewController {
    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of row
-        print(categories.count)
         return categories.count
-        
     }
 
     
@@ -53,7 +50,7 @@ class CategoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCellIdentifier", for: indexPath)
 
     cell.textLabel?.text = categories[indexPath.row].strCategory
-    print(categories[1].strCategory)
+    
      
 
         return cell

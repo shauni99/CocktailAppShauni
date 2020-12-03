@@ -16,3 +16,7 @@ enum CodingKeys: String, CodingKey {
     }
 }
 
+struct Categories: Codable {
+    let drinks: [Category]
+}
+

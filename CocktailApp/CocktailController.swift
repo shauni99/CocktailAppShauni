@@ -9,26 +9,20 @@ import Foundation
 
 struct CocktailController {
     
+    let baseUrl = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list")!
     
-   
-    
-    func fetchCategories(completion: @escaping ([Category]?) -> Void)
-    {
-        let baseURL = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list")!
-  
-        _ = URLSession.shared.dataTask(with: baseURL)
-           { (data, response, error) in
+    func fetchCategories( completion: @escaping ([Category]?) -> Void) {
+        let task = URLSession.shared.dataTask(with: baseUrl) { (data, response, error) in
             let jsonDecoder = JSONDecoder()
-            if let data = data,
-                let drinksCategory = try? jsonDecoder.decode(DrinksCategory.self,
-                  from: data) {
-                completion(drinksCategory.drinks)
-                print(drinksCategory.drinks)
+            if let data = data, let categories = try? jsonDecoder.decode(Categories.self, from: data) {
+                completion(categories.drinks)
+                
             } else {
                 completion(nil)
             }
         }
-        
+        task.resume()
     }
 
 }
+

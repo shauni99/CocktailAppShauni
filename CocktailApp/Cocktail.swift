@@ -14,37 +14,37 @@ struct Cocktail: Codable {
     var instructions: String
     var alcoholic: String
     var category: String
-    var strIngredient1: String
-    var strIngredient2: String
-    var strIngredient3: String
-    var strIngredient4: String
-    var strIngredient5: String
-    var strIngredient6: String
-    var strIngredient7: String
-    var strIngredient8: String
-    var strIngredient9: String
-    var strIngredient10: String
-    var strIngredient11: String
-    var strIngredient12: String
-    var strIngredient13: String
-    var strIngredient14: String
-    var strIngredient15: String
+    var strIngredient1: String?
+    var strIngredient2: String?
+    var strIngredient3: String?
+    var strIngredient4: String?
+    var strIngredient5: String?
+    var strIngredient6: String?
+    var strIngredient7: String?
+    var strIngredient8: String?
+    var strIngredient9: String?
+    var strIngredient10: String?
+    var strIngredient11: String?
+    var strIngredient12: String?
+    var strIngredient13: String?
+    var strIngredient14: String?
+    var strIngredient15: String?
     
-    var ingredientAmount1: String
-    var ingredientAmount2: String
-    var ingredientAmount3: String
-    var ingredientAmount4: String
-    var ingredientAmount5: String
-    var ingredientAmount6: String
-    var ingredientAmount7: String
-    var ingredientAmount8: String
-    var ingredientAmount9: String
-    var ingredientAmount10: String
-    var ingredientAmount11: String
-    var ingredientAmount12: String
-    var ingredientAmount13: String
-    var ingredientAmount14: String
-    var ingredientAmount15: String
+    var ingredientAmount1: String?
+    var ingredientAmount2: String?
+    var ingredientAmount3: String?
+    var ingredientAmount4: String?
+    var ingredientAmount5: String?
+    var ingredientAmount6: String?
+    var ingredientAmount7: String?
+    var ingredientAmount8: String?
+    var ingredientAmount9: String?
+    var ingredientAmount10: String?
+    var ingredientAmount11: String?
+    var ingredientAmount12: String?
+    var ingredientAmount13: String?
+    var ingredientAmount14: String?
+    var ingredientAmount15: String?
 
     enum CodingKeys: String, CodingKey{
         case id = "idDrink"
@@ -85,7 +85,15 @@ struct Cocktail: Codable {
         case ingredientAmount15 = "strMeasure15"
                 
     }
+    
 }
+
+struct Drinks: Codable{
+    let drinks: [Cocktail]
+}
+
+
+
 
 
 
