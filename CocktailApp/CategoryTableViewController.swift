@@ -9,7 +9,7 @@ import UIKit
 
 class CategoryTableViewController: UITableViewController {
     let cocktailController = CocktailController()
-    var categories: [Category] = [Category]()
+    var categories = [Category]()
    
 
     override func viewDidLoad() {
@@ -50,6 +50,8 @@ class CategoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCellIdentifier", for: indexPath)
 
     cell.textLabel?.text = categories[indexPath.row].strCategory
+    cell.imageView?.image = UIImage(named: indexPath.row.description)
+    //print(indexPath.row.description)
     
      
 
@@ -92,14 +94,16 @@ class CategoryTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func prepare(for segue: UIStoryboardSegue, sender:
+    Any?) {
+        if segue.identifier == "ShowCocktailsPerCategory" {
+            let cocktailTableViewController = segue.destination as!
+            CocktailTableViewController
+            let index = tableView.indexPathForSelectedRow!.row
+            cocktailTableViewController.category = categories[index].strCategory
+        }
     }
-    */
 
 }

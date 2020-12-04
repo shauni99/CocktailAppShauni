@@ -8,38 +8,46 @@
 import UIKit
 
 class CocktailTableViewController: UITableViewController {
+    let cocktailController = CocktailController()
+    var category : String!
+    var cocktails = [Cocktail]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        cocktailController.fetchCocktails(forCategory: category) { (cocktails) in
+                  if let cocktails = cocktails {
+                    self.updateUI(with: cocktails)
+                  }
+                }
     }
+    
+    func updateUI(with cocktails: [Cocktail]) {
+            DispatchQueue.main.async {
+                self.cocktails = cocktails
+                self.tableView.reloadData()
+            }
+        }
+
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+       return cocktails.count
+       
     }
 
-    /*
+   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CocktailIdentifierCell", for: indexPath)
 
-        // Configure the cell...
+        let cocktail = cocktails[indexPath.row]
+        cell.textLabel?.text = cocktail.title
 
         return cell
     }
-    */
+   
 
     /*
     // Override to support conditional editing of the table view.
