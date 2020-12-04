@@ -13,7 +13,9 @@ class CocktailTableViewController: UITableViewController {
     var cocktails = [Cocktail]()
 
     override func viewDidLoad() {
+        navigationItem.title = category
         super.viewDidLoad()
+        
         cocktailController.fetchCocktails(forCategory: category) { (cocktails) in
                   if let cocktails = cocktails {
                     self.updateUI(with: cocktails)
@@ -44,6 +46,7 @@ class CocktailTableViewController: UITableViewController {
 
         let cocktail = cocktails[indexPath.row]
         cell.textLabel?.text = cocktail.title
+        
 
         return cell
     }
@@ -84,14 +87,18 @@ class CocktailTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "CocktailDetailSegue" {
+            let cocktailDetailController = segue.destination as!
+            CocktailDetailController
+            let index = tableView.indexPathForSelectedRow!.row
+            cocktailDetailController.cocktail = cocktails[index]
+        }
     }
-    */
+    
 
 }

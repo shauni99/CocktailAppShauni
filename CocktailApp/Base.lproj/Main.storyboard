@@ -84,6 +84,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="12V-4x-1Z6" kind="show" identifier="CocktailDetailSegue" id="ZYu-Y7-seZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -96,6 +99,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EyN-75-Jup" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2551" y="15"/>
+        </scene>
+        <!--Cocktail Detail Controller-->
+        <scene sceneID="1fn-Q5-sdc">
+            <objects>
+                <viewController id="12V-4x-1Z6" customClass="CocktailDetailController" customModule="CocktailApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aFM-E6-m1R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ny-ab-6kl">
+                                <rect key="frame" x="20" y="199" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zxe-26-dfB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iv5-8s-8We"/>
+                    <connections>
+                        <outlet property="labelTitle" destination="6ny-ab-6kl" id="fUu-2v-qy8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IjE-DZ-sim" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3484.057971014493" y="26.785714285714285"/>
         </scene>
         <!--Cocktails-->
         <scene sceneID="Ocw-mh-wHX">

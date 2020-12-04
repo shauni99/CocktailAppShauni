@@ -19,6 +19,7 @@
 		57776CE125769BE300B96038 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57776CE025769BE300B96038 /* Favorite.swift */; };
 		57776CE425769D3D00B96038 /* CocktailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57776CE325769D3D00B96038 /* CocktailController.swift */; };
 		57776CE92576B01D00B96038 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57776CE82576B01D00B96038 /* Category.swift */; };
+		5785F171257A7FDC00C71BF1 /* CocktailDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785F170257A7FDC00C71BF1 /* CocktailDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		57776CE025769BE300B96038 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		57776CE325769D3D00B96038 /* CocktailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailController.swift; sourceTree = "<group>"; };
 		57776CE82576B01D00B96038 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		5785F170257A7FDC00C71BF1 /* CocktailDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				57776CE025769BE300B96038 /* Favorite.swift */,
 				57776CDA2576918D00B96038 /* Cocktail.swift */,
 				57776CD125768B1600B96038 /* CategoryTableViewController.swift */,
+				5785F170257A7FDC00C71BF1 /* CocktailDetailController.swift */,
 				57776CD425768B2A00B96038 /* CocktailTableViewController.swift */,
 				57776CD725768B3C00B96038 /* FavoriteTableViewController.swift */,
 				57776CC42576877E00B96038 /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 				57776CE125769BE300B96038 /* Favorite.swift in Sources */,
 				57776CBC2576877C00B96038 /* AppDelegate.swift in Sources */,
 				57776CBE2576877C00B96038 /* SceneDelegate.swift in Sources */,
+				5785F171257A7FDC00C71BF1 /* CocktailDetailController.swift in Sources */,
 				57776CD225768B1600B96038 /* CategoryTableViewController.swift in Sources */,
 				57776CE92576B01D00B96038 /* Category.swift in Sources */,
 				57776CD525768B2A00B96038 /* CocktailTableViewController.swift in Sources */,
