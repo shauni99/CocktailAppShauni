@@ -9,11 +9,17 @@ import Foundation
 
 struct CocktailController {
     
-    
+    static let shared = CocktailController()
+    let baseURL = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/")!
     
     func fetchCategories( completion: @escaping ([Category]?) -> Void) {
-        let categoryUrl = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list")!
-        let task = URLSession.shared.dataTask(with: categoryUrl) { (data, response, error) in
+        let initialCategoryUrl = baseURL.appendingPathComponent("list.php")
+        var components = URLComponents(url: initialCategoryUrl,
+        resolvingAgainstBaseURL: true)!
+        components.queryItems = [URLQueryItem(name: "c", value: "list")]
+        let allCategoriesUrl = components.url!
+        
+        let task = URLSession.shared.dataTask(with: allCategoriesUrl) { (data, response, error) in
             let jsonDecoder = JSONDecoder()
             if let data = data, let categories = try? jsonDecoder.decode(Categories.self, from: data) {
                 completion(categories.drinks)
@@ -28,12 +34,10 @@ struct CocktailController {
    
     func fetchCocktails(forCategory categoryName: String, completion:
     @escaping ([Cocktail]?) -> Void) {
-        let baseUrl = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/")!
-        let initialCocktailsOfCategoryUrl = baseUrl.appendingPathComponent("filter.php")
+        let initialCocktailsOfCategoryUrl = baseURL.appendingPathComponent("filter.php")
         var components = URLComponents(url: initialCocktailsOfCategoryUrl,
         resolvingAgainstBaseURL: true)!
-        components.queryItems = [URLQueryItem(name: "c",
-        value: categoryName)]
+        components.queryItems = [URLQueryItem(name: "c", value: categoryName)]
         let cocktailsOfCategoryUrl = components.url!
         
         let task = URLSession.shared.dataTask(with: cocktailsOfCategoryUrl) { (data, response, error) in
@@ -46,9 +50,8 @@ struct CocktailController {
                         if let cocktailOfCategory = cocktailOfCategory{
                             cocktails.append(contentsOf: cocktailOfCategory)
                             completion(cocktails)
-                        }
+                            }
                     }
-                
                 }
             } else {
                 completion(nil)
@@ -61,12 +64,11 @@ struct CocktailController {
     
     //we moeten nog eens apart de cocktail bij ID ophalen, anders toont hij alle cocktails in 1 en dezelfde cell + hebben we niet genoeg info voor het recept
      func fetchCocktail(id: String, completion: @escaping([Cocktail]?) -> Void){
-        let baseUrl = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/")!
-        let initialCocktailOfCategoryUrl = baseUrl.appendingPathComponent("lookup.php/")
+        let initialCocktailOfCategoryUrl = baseURL.appendingPathComponent("lookup.php/")
         var components = URLComponents(url: initialCocktailOfCategoryUrl,
         resolvingAgainstBaseURL: true)!
-        components.queryItems = [URLQueryItem(name: "i",
-        value: id)]
+        components.queryItems = [URLQueryItem(name: "i", value: id)]
+        
         let cocktailOfCategoryUrl = components.url!
         let task = URLSession.shared.dataTask(with: cocktailOfCategoryUrl) { (data, response, error) in
             let jsonDecoder = JSONDecoder()

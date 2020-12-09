@@ -8,7 +8,6 @@
 import UIKit
 
 class CocktailTableViewController: UITableViewController {
-    let cocktailController = CocktailController()
     var category : String!
     var cocktails = [Cocktail]()
 
@@ -16,7 +15,7 @@ class CocktailTableViewController: UITableViewController {
         navigationItem.title = category
         super.viewDidLoad()
         
-        cocktailController.fetchCocktails(forCategory: category) { (cocktails) in
+        CocktailController.shared.fetchCocktails(forCategory: category) { (cocktails) in
                   if let cocktails = cocktails {
                     self.updateUI(with: cocktails)
                   }

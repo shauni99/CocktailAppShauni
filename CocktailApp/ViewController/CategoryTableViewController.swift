@@ -8,13 +8,12 @@
 import UIKit
 
 class CategoryTableViewController: UITableViewController {
-    let cocktailController = CocktailController()
     var categories = [Category]()
    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        cocktailController.fetchCategories { (categories) in
+        CocktailController.shared.fetchCategories { (categories) in
                   if let categories = categories {
                     self.updateUI(with: categories)
                   }
