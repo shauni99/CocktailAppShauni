@@ -75,6 +75,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="12V-4x-1Z6" kind="show" identifier="FavoriteCocktailDetailSegue" id="S6r-oI-SuF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -549,6 +552,9 @@
             <point key="canvasLocation" x="823.1884057971015" y="716.51785714285711"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZYu-Y7-seZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="file-list-tick-7" width="30" height="30"/>
         <image name="glass" width="30" height="30"/>
