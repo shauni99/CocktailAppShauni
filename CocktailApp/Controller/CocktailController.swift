@@ -8,8 +8,17 @@
 import Foundation
 
 struct CocktailController {
+    static let favoriteUpdatedNotification =
+       Notification.Name("CocktailController.favoriteUpdated")
     
-    static let shared = CocktailController()
+    var favorite = Favorite(){
+        didSet {
+        NotificationCenter.default.post(name:
+           CocktailController.favoriteUpdatedNotification, object: nil)
+    }
+    }
+    
+    static var shared = CocktailController()
     let baseURL = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/")!
     
     func fetchCategories( completion: @escaping ([Category]?) -> Void) {

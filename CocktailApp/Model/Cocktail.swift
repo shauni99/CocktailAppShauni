@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Cocktail: Codable {
+struct Cocktail: Codable, Equatable {
     var id: String
     var title: String
     var image: String

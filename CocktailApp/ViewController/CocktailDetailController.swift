@@ -7,9 +7,14 @@
 
 import UIKit
 
+
+
 class CocktailDetailController: UIViewController {
     
     var cocktail: Cocktail!
+
+    
+    @IBOutlet weak var addToFavoritesButton: UIButton!
     @IBOutlet weak var alcoholicLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var ingredientLabel1: UILabel!
@@ -50,6 +55,28 @@ class CocktailDetailController: UIViewController {
         navigationItem.title = cocktail.title
         updateView()
         }
+    
+    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.3) {
+                self.addToFavoritesButton.transform =
+                CGAffineTransform(scaleX: 3.0, y: 3.0)
+                self.addToFavoritesButton.transform =
+                CGAffineTransform(scaleX: 1.0, y: 1.0)
+            }
+        if !CocktailController.shared.favorite.favCocktails.contains(cocktail) {
+            CocktailController.shared.favorite.favCocktails.append(cocktail)
+            
+       
+            
+    
+    }
+    }
+    
+
+
+    
+    
+    
     
     func updateView(){
          instructionsTextView.text = cocktail.instructions
@@ -111,15 +138,9 @@ class CocktailDetailController: UIViewController {
         alcoholicLabel.layer.masksToBounds = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
+    
 
 }
+

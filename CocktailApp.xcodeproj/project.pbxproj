@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576FBB0E258128D800220391 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576FBB0D258128D800220391 /* Favorite.swift */; };
 		57776CBC2576877C00B96038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57776CBB2576877C00B96038 /* AppDelegate.swift */; };
 		57776CBE2576877C00B96038 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57776CBD2576877C00B96038 /* SceneDelegate.swift */; };
 		57776CC32576877C00B96038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57776CC12576877C00B96038 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		576FBB0D258128D800220391 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		57776CB82576877C00B96038 /* CocktailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57776CBB2576877C00B96038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57776CBD2576877C00B96038 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		576EAC7A257E93EF00AF34A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				576FBB0D258128D800220391 /* Favorite.swift */,
 				57776CE82576B01D00B96038 /* Category.swift */,
 				57776CDA2576918D00B96038 /* Cocktail.swift */,
 			);
@@ -208,6 +211,7 @@
 				57776CBE2576877C00B96038 /* SceneDelegate.swift in Sources */,
 				5785F171257A7FDC00C71BF1 /* CocktailDetailController.swift in Sources */,
 				57776CD225768B1600B96038 /* CategoryTableViewController.swift in Sources */,
+				576FBB0E258128D800220391 /* Favorite.swift in Sources */,
 				57776CE92576B01D00B96038 /* Category.swift in Sources */,
 				57776CD525768B2A00B96038 /* CocktailTableViewController.swift in Sources */,
 				57776CE425769D3D00B96038 /* CocktailController.swift in Sources */,
@@ -367,6 +371,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CocktailApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ENFORCE_EXCLUSIVE_ACCESS = off;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -386,6 +391,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CocktailApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ENFORCE_EXCLUSIVE_ACCESS = off;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
