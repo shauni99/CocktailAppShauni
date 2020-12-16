@@ -63,16 +63,22 @@ class CocktailDetailController: UIViewController {
                 self.addToFavoritesButton.transform =
                 CGAffineTransform(scaleX: 1.0, y: 1.0)
             }
-        if !CocktailController.shared.favorite.favCocktails.contains(cocktail) {
-            CocktailController.shared.favorite.favCocktails.append(cocktail)
-            
        
-            
-    
-    }
+        updateFavoriteCocktailsList()
+        addToFavoritesButton.isSelected = !addToFavoritesButton.isSelected
     }
     
 
+    func updateFavoriteCocktailsList(){
+        if !CocktailController.shared.favorite.favCocktails.contains(cocktail) {
+            CocktailController.shared.favorite.favCocktails.append(cocktail)
+           
+        }else{
+            if let index =  CocktailController.shared.favorite.favCocktails.firstIndex(of: cocktail) {
+                CocktailController.shared.favorite.favCocktails.remove(at: index)
+            }
+        }
+    }
 
     
     
@@ -113,7 +119,7 @@ class CocktailDetailController: UIViewController {
         
         getImage()
         decideAlcoholLabelText()
-
+        changeButton()
         
     }
     
@@ -125,6 +131,15 @@ class CocktailDetailController: UIViewController {
                  self.imageView.image = UIImage(data: data!)
              }
          }
+    }
+    
+    func changeButton(){
+        if !CocktailController.shared.favorite.favCocktails.contains(cocktail) {
+         
+            addToFavoritesButton.isSelected = false
+            }else{
+            addToFavoritesButton.isSelected = true
+        }
     }
     
     func decideAlcoholLabelText(){
