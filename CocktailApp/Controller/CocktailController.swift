@@ -90,6 +90,34 @@ struct CocktailController {
         }
         task.resume()
     }
+    
+    mutating func loadOrder() {
+        let documentsDirectoryURL =
+           FileManager.default.urls(for: .documentDirectory,
+           in: .userDomainMask).first!
+        let favoriteFileURL =
+           documentsDirectoryURL.appendingPathComponent("favorite").appendingPathExtension("json")
+    
+        guard let data = try? Data(contentsOf: favoriteFileURL) else
+           { return }
+        favorite = (try? JSONDecoder().decode(Favorite.self, from:
+           data)) ?? Favorite(favCocktails: [])
+    }
+    
+    
+    func saveFavorite() {
+        let documentsDirectoryURL =
+           FileManager.default.urls(for: .documentDirectory,
+           in: .userDomainMask).first!
+        let favoriteFileURL =
+           documentsDirectoryURL.appendingPathComponent("favorite").appendingPathExtension("json")
+    
+        if let data = try? JSONEncoder().encode(favorite) {
+            try? data.write(to: favoriteFileURL)
+        }
+    }
+ 
+    
  
 }
 
