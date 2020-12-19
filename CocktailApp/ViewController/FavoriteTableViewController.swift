@@ -12,7 +12,7 @@ class FavoriteTableViewController: UITableViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        FavoriteRepository.shared.loadFavorite()
         NotificationCenter.default.addObserver(tableView!, selector:#selector(UITableView.reloadData), name:
         CocktailController.favoriteUpdatedNotification, object: nil)
      

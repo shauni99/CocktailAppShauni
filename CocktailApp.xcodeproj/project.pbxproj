@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5756D729258E27B70096116B /* FavoriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756D728258E27B70096116B /* FavoriteRepository.swift */; };
 		576F2B6B258CD0F1007839B4 /* CustomCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F2B6A258CD0F1007839B4 /* CustomCategoryTableViewCell.swift */; };
 		576F2B71258CD94E007839B4 /* CustomFavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F2B70258CD94E007839B4 /* CustomFavoriteTableViewCell.swift */; };
 		576FBB0E258128D800220391 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576FBB0D258128D800220391 /* Favorite.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5756D728258E27B70096116B /* FavoriteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRepository.swift; sourceTree = "<group>"; };
 		576F2B6A258CD0F1007839B4 /* CustomCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		576F2B70258CD94E007839B4 /* CustomFavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		576FBB0D258128D800220391 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5756D727258E279A0096116B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5756D728258E27B70096116B /* FavoriteRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		576EAC7A257E93EF00AF34A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,7 @@
 		57776CBA2576877C00B96038 /* CocktailApp */ = {
 			isa = PBXGroup;
 			children = (
+				5756D727258E279A0096116B /* Repository */,
 				576F2B68258CCDF5007839B4 /* Views */,
 				576EAC81257E950C00AF34A4 /* Assets */,
 				576EAC7F257E94D900AF34A4 /* Storyboard */,
@@ -228,6 +239,7 @@
 				57776CD225768B1600B96038 /* CategoryTableViewController.swift in Sources */,
 				576F2B71258CD94E007839B4 /* CustomFavoriteTableViewCell.swift in Sources */,
 				576FBB0E258128D800220391 /* Favorite.swift in Sources */,
+				5756D729258E27B70096116B /* FavoriteRepository.swift in Sources */,
 				57776CE92576B01D00B96038 /* Category.swift in Sources */,
 				57776CD525768B2A00B96038 /* CocktailTableViewController.swift in Sources */,
 				57776CE425769D3D00B96038 /* CocktailController.swift in Sources */,

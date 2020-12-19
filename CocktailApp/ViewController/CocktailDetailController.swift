@@ -78,6 +78,7 @@ class CocktailDetailController: UIViewController {
                 CocktailController.shared.favorite.favCocktails.remove(at: index)
             }
         }
+        FavoriteRepository.shared.saveFavorite()
     }
 
     
