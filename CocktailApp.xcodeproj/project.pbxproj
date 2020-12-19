@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5756D729258E27B70096116B /* FavoriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756D728258E27B70096116B /* FavoriteRepository.swift */; };
+		5756D737258E3B7F0096116B /* GroceryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756D736258E3B7F0096116B /* GroceryView.swift */; };
+		5756D73C258E3F8B0096116B /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756D73B258E3F8B0096116B /* HostingController.swift */; };
+		5756D740258E429C0096116B /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756D73F258E429C0096116B /* GroceryItem.swift */; };
 		576F2B6B258CD0F1007839B4 /* CustomCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F2B6A258CD0F1007839B4 /* CustomCategoryTableViewCell.swift */; };
 		576F2B71258CD94E007839B4 /* CustomFavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F2B70258CD94E007839B4 /* CustomFavoriteTableViewCell.swift */; };
 		576FBB0E258128D800220391 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576FBB0D258128D800220391 /* Favorite.swift */; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		5756D728258E27B70096116B /* FavoriteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRepository.swift; sourceTree = "<group>"; };
+		5756D736258E3B7F0096116B /* GroceryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryView.swift; sourceTree = "<group>"; };
+		5756D73B258E3F8B0096116B /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		5756D73F258E429C0096116B /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		576F2B6A258CD0F1007839B4 /* CustomCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		576F2B70258CD94E007839B4 /* CustomFavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		576FBB0D258128D800220391 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
@@ -65,9 +71,19 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		5756D735258E3A990096116B /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				5756D736258E3B7F0096116B /* GroceryView.swift */,
+				5756D73B258E3F8B0096116B /* HostingController.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		576EAC7A257E93EF00AF34A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5756D73F258E429C0096116B /* GroceryItem.swift */,
 				576FBB0D258128D800220391 /* Favorite.swift */,
 				57776CE82576B01D00B96038 /* Category.swift */,
 				57776CDA2576918D00B96038 /* Cocktail.swift */,
@@ -148,6 +164,7 @@
 		57776CBA2576877C00B96038 /* CocktailApp */ = {
 			isa = PBXGroup;
 			children = (
+				5756D735258E3A990096116B /* SwiftUI */,
 				5756D727258E279A0096116B /* Repository */,
 				576F2B68258CCDF5007839B4 /* Views */,
 				576EAC81257E950C00AF34A4 /* Assets */,
@@ -231,16 +248,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5756D73C258E3F8B0096116B /* HostingController.swift in Sources */,
 				57776CD825768B3C00B96038 /* FavoriteTableViewController.swift in Sources */,
 				57776CBC2576877C00B96038 /* AppDelegate.swift in Sources */,
 				576F2B6B258CD0F1007839B4 /* CustomCategoryTableViewCell.swift in Sources */,
 				57776CBE2576877C00B96038 /* SceneDelegate.swift in Sources */,
 				5785F171257A7FDC00C71BF1 /* CocktailDetailController.swift in Sources */,
 				57776CD225768B1600B96038 /* CategoryTableViewController.swift in Sources */,
+				5756D737258E3B7F0096116B /* GroceryView.swift in Sources */,
 				576F2B71258CD94E007839B4 /* CustomFavoriteTableViewCell.swift in Sources */,
 				576FBB0E258128D800220391 /* Favorite.swift in Sources */,
 				5756D729258E27B70096116B /* FavoriteRepository.swift in Sources */,
 				57776CE92576B01D00B96038 /* Category.swift in Sources */,
+				5756D740258E429C0096116B /* GroceryItem.swift in Sources */,
 				57776CD525768B2A00B96038 /* CocktailTableViewController.swift in Sources */,
 				57776CE425769D3D00B96038 /* CocktailController.swift in Sources */,
 				57776CDB2576918D00B96038 /* Cocktail.swift in Sources */,

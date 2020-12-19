@@ -208,14 +208,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CocktailIdentifierCell" textLabel="b9j-m1-zbj" style="IBUITableViewCellStyleDefault" id="IQY-rx-9b5">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="47.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IQY-rx-9b5" id="ecZ-bG-whl">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="47.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b9j-m1-zbj">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="374" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -597,29 +597,16 @@
             </objects>
             <point key="canvasLocation" x="1733.3333333333335" y="1.3392857142857142"/>
         </scene>
-        <!--Groceries-->
-        <scene sceneID="Ngy-YU-rz0">
-            <objects>
-                <viewController id="JJX-Ja-G2v" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EbE-Gd-yKb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="RPM-Ml-R6I"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Groceries" image="file-list-tick-7" selectedImage="file-list-tick-7" id="uO9-Sg-2YP"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N7L-Kj-pR6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1739.1304347826087" y="1431.6964285714284"/>
-        </scene>
-        <!--Hosting Controller-->
+        <!--Item-->
         <scene sceneID="1g9-KR-MXB">
             <objects>
-                <hostingController id="gco-YE-oWe" sceneMemberID="viewController"/>
+                <hostingController id="gco-YE-oWe" customClass="HostingController" customModule="CocktailApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="file-list-tick-7" id="JDo-QT-lbt"/>
+                    <navigationItem key="navigationItem" id="GDs-9q-eyO"/>
+                </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cft-Nl-kgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2657.971014492754" y="1429.6875"/>
+            <point key="canvasLocation" x="3531.884057971015" y="1508.7053571428571"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="liP-8q-2bg">
@@ -634,12 +621,31 @@
                     <connections>
                         <segue destination="Zlw-Bz-wFh" kind="relationship" relationship="viewControllers" id="B3b-nl-sYU"/>
                         <segue destination="AXY-9F-dsO" kind="relationship" relationship="viewControllers" id="FNw-xL-QDJ"/>
-                        <segue destination="JJX-Ja-G2v" kind="relationship" relationship="viewControllers" id="PNR-Up-vU4"/>
+                        <segue destination="Fe4-iV-ZJW" kind="relationship" relationship="viewControllers" id="xGP-sL-Hx2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzt-MP-iDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="823.1884057971015" y="716.51785714285711"/>
+        </scene>
+        <!--Groceries-->
+        <scene sceneID="SFk-oo-pah">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fe4-iV-ZJW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Groceries" image="file-list-tick-7" selectedImage="file-list-tick-7" id="tOU-zK-wFM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hpO-28-StR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gco-YE-oWe" kind="relationship" relationship="rootViewController" id="2gD-zO-D5o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ET4-Ie-I48" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2579.7101449275365" y="1508.7053571428571"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
