@@ -6,15 +6,9 @@
 //
 
 import Foundation
-import SwiftUI
-import Combine
 
-struct GroceryItem: Identifiable {
-    var id = String()
-    var groceryItem = String()
+struct GroceryItem: Codable{
+    var name: String
 }
 
 
-class GroceryItemStore: ObservableObject {
-    @Published var groceryItems = [GroceryItem]()
-}
