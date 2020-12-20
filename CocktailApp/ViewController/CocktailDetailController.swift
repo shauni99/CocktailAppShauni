@@ -10,6 +10,7 @@ import UIKit
 
 
 class CocktailDetailController: UIViewController {
+   
     
     var cocktail: Cocktail!
 
