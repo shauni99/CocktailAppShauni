@@ -132,7 +132,7 @@
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.9922308326" green="0.95991545919999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" red="1" green="0.95591145749999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="HCV-IR-gpW" secondAttribute="trailing" constant="8" id="6QD-64-Nw2"/>
                                                 <constraint firstAttribute="bottom" secondItem="bnH-sF-l0r" secondAttribute="bottom" constant="8" id="9lz-oC-68z"/>
