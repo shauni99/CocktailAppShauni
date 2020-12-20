@@ -35,7 +35,7 @@ struct GroceryView: View {
 
 
 func addNewGrocery(){
-    groceryItemStore.groceryItems.append(GroceryItem(id: String(groceryItemStore.groceryItems.count + 1), groceryItem: newGrocery))
+    groceryItemStore.groceryItems.append(GroceryItem(id:String(groceryItemStore.groceryItems.count + 1), groceryItem: newGrocery))
     self.newGrocery = ""
 }
     
