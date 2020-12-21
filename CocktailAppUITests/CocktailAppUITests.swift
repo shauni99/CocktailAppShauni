@@ -9,25 +9,25 @@ import XCTest
 @testable import CocktailApp
 
 class CocktailAppUITests: XCTestCase {
-  /*
-    var categoryController: CategoryTableViewController = CategoryTableViewController()
+  
+   /*  var groceryController: GroceryViewController = GroceryViewController()
     
-    let category1: Category = Category(strCategory: "Shot")
+    let grocery: GroceryItem = GroceryItem(name: "Bacardi")
 
     override func setUp()  {
      
         continueAfterFailure = false
-        categoryController.categories = [category1]
 
     }
 
    
-    func testExample()  {
-        let sut = CustomCategoryTableViewCell()
+    func test_GroceryCellView_Name()  {
+        let sut = CustomGroceryTableViewCell()
         _ = sut.cellView
         
-        XCTAssertEqual(sut.categoryTitle.text, "shot")
+        XCTAssertEqual(sut.groceryName.text, "Bacardi")
         
-    }*/
+    }
+ */
 
 }

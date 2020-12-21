@@ -14,7 +14,7 @@ struct OnboardingView: View {
         UIHostingController(rootView: AboutView(imageString: "grocery"))
     ]
     
-    var titles = ["Shauni Vansteyvoort","Add favorites","Make grocery list"]
+    var titles = ["Shauni Vansteyvoort","Add favorites","Make a grocery list"]
     var descriptions = ["This app is created due to an iOS assignment for school and makes use of the CocktailDB API", "This app allows you to add your favorite cocktails to a separate favorite view", "This app allows you to make a grocery list based upon the cocktails you liked"]
     @State var currentPageIndex = 0
     
