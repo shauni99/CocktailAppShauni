@@ -82,7 +82,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zm3-k4-97v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2623.1884057971015" y="1.3392857142857142"/>
+            <point key="canvasLocation" x="2825" y="1"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="b7P-Pb-oQu">
@@ -195,7 +195,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2QX-pp-qDu">
                                         <rect key="frame" x="8" y="8" width="398" height="55"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new grocery..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTe-av-1jH">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a new grocery..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTe-av-1jH">
                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="55"/>
                                                 <edgeInsets key="layoutMargins" top="10" left="5" bottom="10" right="5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -295,7 +295,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryD-ms-Cd8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4352.1739130434789" y="1468.5267857142856"/>
+            <point key="canvasLocation" x="2826" y="1505"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="C3W-kz-aJA">
+            <objects>
+                <hostingController id="xp8-LB-WOu" customClass="HostingController" customModule="CocktailApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qUf-Bd-Uwr"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9C-em-9vf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2890" y="2227"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="VSX-Ih-CfD">
@@ -354,7 +364,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EyN-75-Jup" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3460.8695652173915" y="14.732142857142856"/>
+            <point key="canvasLocation" x="3704" y="1"/>
         </scene>
         <!--Cocktail Detail Controller-->
         <scene sceneID="1fn-Q5-sdc">
@@ -694,7 +704,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IjE-DZ-sim" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4394.202898550725" y="26.785714285714285"/>
+            <point key="canvasLocation" x="4557" y="1"/>
         </scene>
         <!--Cocktails-->
         <scene sceneID="Ocw-mh-wHX">
@@ -711,7 +721,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25A-bF-FUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733.3333333333335" y="1.3392857142857142"/>
+            <point key="canvasLocation" x="1936" y="1"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="liP-8q-2bg">
@@ -727,17 +737,18 @@
                         <segue destination="Zlw-Bz-wFh" kind="relationship" relationship="viewControllers" id="B3b-nl-sYU"/>
                         <segue destination="AXY-9F-dsO" kind="relationship" relationship="viewControllers" id="FNw-xL-QDJ"/>
                         <segue destination="bdE-xJ-jeI" kind="relationship" relationship="viewControllers" id="K2F-m0-oED"/>
+                        <segue destination="amf-b4-tnH" kind="relationship" relationship="viewControllers" id="TkX-zf-6nx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzt-MP-iDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="823.1884057971015" y="716.51785714285711"/>
         </scene>
-        <!--Item-->
+        <!--Groceries-->
         <scene sceneID="LcE-9g-tOK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bdE-xJ-jeI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MRy-e8-Dp7"/>
+                    <tabBarItem key="tabBarItem" title="Groceries" image="file-list-tick-7" selectedImage="file-list-tick-7" id="MRy-e8-Dp7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CQq-r0-qMB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -750,17 +761,38 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mE7-W6-ThY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3442.0289855072465" y="1468.5267857142856"/>
+            <point key="canvasLocation" x="1936" y="1505"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="W9p-1a-Dip">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="amf-b4-tnH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" image="person.fill.questionmark" catalog="system" selectedImage="person.fill.questionmark" id="ZBu-UP-cDH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HxX-lp-pj9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xp8-LB-WOu" kind="relationship" relationship="rootViewController" id="vQ0-ni-d0e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83v-aW-LrL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="2227"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="S6r-oI-SuF"/>
+        <segue reference="ZYu-Y7-seZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cart.circle" catalog="system" width="128" height="121"/>
+        <image name="file-list-tick-7" width="30" height="30"/>
         <image name="glass" width="30" height="30"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="person.fill.questionmark" catalog="system" width="128" height="104"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
