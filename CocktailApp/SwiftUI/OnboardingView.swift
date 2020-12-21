@@ -70,7 +70,7 @@ struct ButtonContent: View {
         .foregroundColor(.black)
         .frame(width: 30, height: 30)
         .padding()
-        .background(Color.pink)
+        .background(Color(red: 1.018, green: 0.6, blue: 1.023))
         .cornerRadius(30)
 }
     
